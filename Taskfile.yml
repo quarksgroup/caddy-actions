@@ -1,0 +1,15 @@
+
+version: '3'
+
+#output: prefixed
+
+silent: true
+
+tasks:
+  build:
+    desc: Build docker image
+    cmds:
+      - docker build --network host -t caddy-actions:{{.GIT_COMMIT}} .
+    vars:
+      GIT_COMMIT:
+        sh: git rev-parse --short HEAD

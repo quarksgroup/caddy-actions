@@ -1,0 +1,9 @@
+name: "GitHub Action for caddy CLI"
+description: "Wraps the caddy CLI tool to enable tasks like configuration validation"
+author: Quarks Group
+branding:
+  icon: "upload-cloud"
+  color: "gray-dark"
+runs:
+  using: "docker"
+  image: "Dockerfile"
